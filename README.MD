@@ -1,7 +1,3 @@
-#### Support
-
-Find the Content Useful?
-[You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
 
 ## Node and Express Tutorial
 
