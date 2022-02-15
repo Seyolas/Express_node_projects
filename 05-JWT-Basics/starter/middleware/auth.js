@@ -5,7 +5,7 @@ const { UnauthenticatedError } = require('../errors');
 const authenticationMiddleware = (req,res,next)=>{
    
     const authHeader = req.headers.authorization;
-    // console.log(req.headers);
+    console.log(req.headers);
     if (!authHeader || !authHeader.startsWith('Bearer')) {
         throw new UnauthenticatedError('No Token provieded')
     }
@@ -15,7 +15,7 @@ const authenticationMiddleware = (req,res,next)=>{
         const decoded = jwt.verify(token,process.env.JWT_SECRET)
         // console.log(decoded);
        const {id,username} = decoded;
-       console.log(req);
+    //    console.log(req);
        req.user = {id,username}
        next()
 
